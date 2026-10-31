@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نظام الحسن | إدارة الرواتب</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loginScreen" class="screen">
+      <div class="login-box">
+        <div class="brand">
+          <h1>نظام الحسن</h1>
+          <p>إدارة الرواتب والغياب</p>
+        </div>
+
+        <form id="loginForm">
+          <label for="username">اسم المستخدم</label>
+          <input id="username" type="text" value="alhasan" required />
+
+          <label for="password">كلمة المرور</label>
+          <input id="password" type="password" value="7AXJYAzM" required />
+
+          <button type="submit">تسجيل الدخول</button>
+          <p id="loginMessage" class="message"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="appScreen" class="screen hidden">
+      <header class="topbar">
+        <div>
+          <h2>نظام الحسن</h2>
+        </div>
+        <button id="logoutBtn" class="logout-btn">تسجيل الخروج</button>
+      </header>
+
+      <main class="container">
+        <section class="summary-cards">
+          <div class="card">
+            <span>إجمالي الرواتب</span>
+            <strong id="totalSalary">0</strong>
+          </div>
+          <div class="card">
+            <span>إجمالي الخصومات</span>
+            <strong id="totalDeductions">0</strong>
+          </div>
+          <div class="card">
+            <span>إجمالي المسحوبات</span>
+            <strong id="totalTaken">0</strong>
+          </div>
+          <div class="card">
+            <span>المتبقي</span>
+            <strong id="totalRemaining">0</strong>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>إضافة سجل راتب جديد</h3>
+          <form id="salaryForm" class="salary-form">
+            <div class="grid">
+              <div>
+                <label>اسم الموظف</label>
+                <input type="text" id="employeeName" required />
+              </div>
+
+              <div>
+                <label>الشهر</label>
+                <input type="month" id="salaryMonth" required />
+              </div>
+
+              <div>
+                <label>راتب الشهر</label>
+                <input type="number" id="salaryAmount" min="0" step="0.01" required />
+              </div>
+
+              <div>
+                <label>عدد أيام الغياب</label>
+                <input type="number" id="absentDays" min="0" step="1" required />
+              </div>
+
+              <div>
+                <label>المسحوب من الراتب</label>
+                <input type="number" id="takenAmount" min="0" step="0.01" required />
+              </div>
+
+              <div>
+                <label>ملاحظات</label>
+                <input type="text" id="notes" placeholder="ملاحظات إضافية" />
+              </div>
+            </div>
+
+            <button type="submit">حفظ البيانات</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h3>سجل الرواتب</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>اسم الموظف</th>
+                  <th>الشهر</th>
+                  <th>الراتب</th>
+                  <th>أيام الغياب</th>
+                  <th>الخصم</th>
+                  <th>المسحوب</th>
+                  <th>الصافي</th>
+                  <th>ملاحظات</th>
+                  <th>حذف</th>
+                </tr>
+              </thead>
+              <tbody id="salaryTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
