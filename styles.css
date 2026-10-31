@@ -1,0 +1,225 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --panel: #1f2937;
+  --primary: #22c55e;
+  --primary-dark: #15803d;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --border: #374151;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #020817, #0f172a);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  min-height: 100vh;
+}
+
+.login-box {
+  width: min(420px, 90%);
+  margin: 120px auto;
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.brand p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+label {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+#loginForm button {
+  background: var(--primary);
+  color: #04130b;
+}
+
+.message {
+  min-height: 20px;
+  margin: 0;
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+.topbar {
+  background: #0b1220;
+  border-bottom: 1px solid var(--border);
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h2 {
+  margin: 0;
+  color: var(--white);
+}
+
+.logout-btn {
+  background: #7f1d1d;
+  color: white;
+}
+
+.container {
+  width: min(1200px, 95%);
+  margin: 30px auto;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: rgba(31, 41, 55, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card span {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.card strong {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.panel {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.panel h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: var(--white);
+}
+
+.salary-form .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.salary-form button {
+  margin-top: 18px;
+  background: var(--primary);
+  color: #04130b;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 940px;
+}
+
+th, td {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 10px;
+  text-align: center;
+}
+
+th {
+  background: #0f172a;
+  color: var(--muted);
+}
+
+td {
+  color: var(--text);
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+  padding: 8px 12px;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    margin-top: 70px;
+  }
+
+  .topbar {
+    padding: 16px 18px;
+  }
+}
